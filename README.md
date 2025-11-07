@@ -1,6 +1,6 @@
 # Simple CLI Calculator
 
-CLI calculator for basic operations (+, -, *, /).
+CLI calculator for basic operations (+, -, *, /, ^).
 
 Commands:
 - help : lists commands
@@ -9,7 +9,6 @@ Commands:
 
 Future:
 - Add **ans** for last result
-- Add **^** for power ( **5 ^ 3 = 125** )
 - Add parentheses support ( **(5 + 3) * 2** )
 - Save history to file
 - Color output (red errors, green results) ***maybe***

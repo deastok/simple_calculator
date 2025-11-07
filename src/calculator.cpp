@@ -1,10 +1,10 @@
-#include <iostream>
-#include <sstream>
 
-double calculate(double x, char op, double y);
 
-int main() {
+#include "calculator.hpp"
 
+
+
+void run() {
     std::string input;
     double x, y;
     char op;
@@ -56,27 +56,6 @@ int main() {
         double result = calculate(x, op, y);
         if (!std::isnan(result)) {
             std::cout << result << "\n";
-        }
-    }
-
-    return 0;
-}
-
-double calculate(double x, char op, double y) {
-    switch (op) {
-        case '+': { return x + y; }
-        case '-': { return x - y; }
-        case '*': { return x * y; }
-        case '/': {
-            if (y == 0) {
-                std::cout << "Error: Divide by zero!\n";
-                return std::numeric_limits<double>::quiet_NaN();
-            }
-            return x / y;
-        }
-        default: {
-            std::cout << "Error: Unsupported operator '" << op << "'. Use +, -, *, /\n";
-            return std::numeric_limits<double>::quiet_NaN();
         }
     }
 }

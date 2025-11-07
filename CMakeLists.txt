@@ -3,4 +3,9 @@ project(math)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(math main.cpp)
+include_directories(include)
+
+add_executable(math
+        src/app.cpp
+        src/calculator.cpp
+)
